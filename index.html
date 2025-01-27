@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- NOTE fonts from fonts.google.com -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacquarda+Bastarda+9&family=Pixelify+Sans:wght@400..700&display=swap"
+    rel="stylesheet">
+
+  <!-- NOTE icon for browser tab -->
+  <link rel="icon" href="https://em-content.zobj.net/source/huawei/375/castle_1f3f0.png">
+  <!-- NOTE linking our own style sheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- NOTE title in browser tab -->
+  <title>Grimtol JS</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      Grimtol JS 🏰
+    </h1>
+  </header>
+
+  <main>
+    <!-- SECTION Shopping screen -->
+    <section id="town" class="screen">
+      <div class="d-flex justify-around">
+        <article class="card w-33">
+          <h2>Shop ⚔️</h2>
+          <hr>
+          <button onclick="buyShopUpgrade('sword')">Upgrade 🗡️: <span>50</span>🪙</button>
+          <button onclick="buyShopUpgrade('bow')">Upgrade 🏹: <span>50</span>🪙</button>
+          <button onclick="buyShopUpgrade('magic')">Upgrade 🔮: <span>50</span>🪙</button>
+          <blockquote>
+            Upgrading attacks increases the amount of damage done with that attack and reduces how much damage monsters
+            deal vs it.
+          </blockquote>
+        </article>
+        <article class="card w-33">
+          <h2>Blacksmith ⚒️</h2>
+          <hr>
+          <button onclick="upgradeArmorAtSmith()">Upgrade 🛡️: <span>100</span>🪙</button>
+          <blockquote>
+            Upgrading armor increases the amount of health the character has
+          </blockquote>
+        </article>
+        <article class="card w-33">
+          <h2>Tavern 🛖</h2>
+          <hr>
+          <button onclick="sleepAtTavern()">Sleep 🛏️ <span>25</span>🪙</button>
+          <blockquote>
+            sleeping replenishes all the characters health
+          </blockquote>
+        </article>
+      </div>
+      <article class="d-flex justify-center">
+        <div>
+          <button onclick="goToDungeon()" class="dungeon-btn text-fancy">
+            Go to Dungeon
+          </button>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- SECTION dungeon screen -->
+    <section id="dungeon" class="hide screen">
+      <button onclick="goToTown()" class="w-25">⬅️Escape back to town</button>
+      <div id="monster-stats">
+        <h2 class="name">Dm Khalid</h2>
+        <img class="monster-portrait" src="imgs/djKhaled.png" alt="">
+        <div class="stat card">
+          <div>🛡️<span class="health">10/10</span></div>
+          <div>⚔️<span class="damage">2</span></div>
+          </di>
+        </div>
+        <section class="d-flex justify-center">
+          <div class="dbl-border card">
+            <span id="character-action">_</span>
+            <span> x </span>
+            <span id="monster-action">_</span>
+          </div>
+        </section>
+        <div class="d-flex justify-center">
+          <button onclick="attackMonster('sword')" class="action-btn">🗡️</button>
+          <button onclick="attackMonster('bow')" class="action-btn">🏹</button>
+          <button onclick="attackMonster('magic')" class="action-btn">🔮</button>
+        </div>
+    </section>
+  </main>
+
+  <!-- SECTION static footer -->
+  <footer id="character-stats" class="d-flex justify-center">
+    <div>
+      <img class="character-portrait" src="imgs/CharaterPortrait.jpg" alt="">
+      <div id="character-name">Mr. World Wide</div>
+    </div>
+    <section class="w-75">
+      <div class="stat card dbl-border">
+        <section>
+          Health <b id="health-level"></b>
+          <div class="health-bar">
+            <div id="health-current" style="width:100%"></div>
+          </div>
+        </section>
+        <section class="d-flex">
+          <article id="sword-level" class="dbl-border stat">🗡️: 1</article>
+          <article id="bow-level" class="dbl-border stat">🏹: 1</article>
+          <article id="magic-level" class="dbl-border stat">🔮 : 1</article>
+          <article id="current-gold" class="dbl-border stat">👛 : 1</article>
+        </section>
+      </div>
+    </section>
+  </footer>
+
+  <script src="MonsterClass.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
