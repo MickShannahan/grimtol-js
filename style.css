@@ -100,11 +100,11 @@ footer {
 }
 
 #town {
-  background-image: url(https://thenerdd.com/wp-content/uploads/2021/05/1.jpg?w=1200);
+  background-image: url(imgs/TownBg.png);
 }
 
 #dungeon {
-  background-image: url(https://www.shutterstock.com/image-vector/dungeon-long-corridor-medieval-castle-600nw-2187850549.jpg);
+  background-image: url(imgs/DungeonBg.png);
 }
 
 .card {
@@ -145,11 +145,12 @@ footer {
 }
 
 .character-portrait {
-  max-height: 150px;
+  height: 85px;
   object-fit: contain;
   border: double var(--black) 5px;
   background-color: var(--dark);
   border-radius: 8px;
+  image-rendering: pixelated;
 }
 
 #monster-stats {

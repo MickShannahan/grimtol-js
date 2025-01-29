@@ -11,8 +11,6 @@ const character = {
   gold: 125
 }
 
-const usedActions = []
-
 let monster = new Monster('Kobold', 10, 1, 'Kobold.png')
 
 const monsterPool = [
@@ -133,7 +131,6 @@ function goToTown() {
 const lossMap = { sword: 'bow', bow: 'magic', magic: 'sword' }
 
 function attackMonster(characterAttack) {
-  usedActions.push(lossMap[characterAttack])
   let monsterAttack = randomizeMonsterAttack()
   console.log(characterAttack, monsterAttack)
 
