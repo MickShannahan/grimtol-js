@@ -2,7 +2,7 @@
   --black: #0a0a0a;
   --light: whitesmoke;
   --dark: rgb(31, 31, 31);
-  --frame: rgb(65, 65, 65);
+  --frame: rgb(46, 41, 41);
   --tan: tan;
   --azure: rgb(38, 38, 255);
   --crimson: #e40712;
@@ -134,8 +134,12 @@ footer {
 .dungeon-btn {
   --active-bg: var(--crimson);
   font-size: 40px;
-  color: var(--black) !important;
+  color: var(--black);
   width: 100%;
+}
+
+.dungeon-btn:hover {
+  color: var(--crimson);
 }
 
 .dungeon-preview {
